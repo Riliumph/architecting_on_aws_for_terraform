@@ -56,6 +56,8 @@ RUN make all && \
     cp diff-highlight /usr/local/bin
 
 # terraform auto complete
+ENV TF_BACKEND_BUCKET=architecting-on-aws-for-terraform
 USER vscode
 WORKDIR /home/vscode
 RUN terraform -install-autocomplete
+
